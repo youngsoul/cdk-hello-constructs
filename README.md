@@ -56,3 +56,27 @@ command.
  * `cdk docs`        open CDK documentation
 
 Enjoy!
+
+## Example
+
+https://docs.aws.amazon.com/solutions/latest/constructs/welcome.html
+
+This CDK project is an adaptation of the above example
+
+## Enhancements
+
+* Assume you have Docker install and running
+
+* created two different lambda directories.  One for the 'HelloLambda' and one for the 'HitCounter'
+
+* added different third party dependencies to each of the lambdas
+    * hello lambda uses `requests` package to hit remote date/time URL
+    * hit lambda uses `pynamodb` to interface with DynamoDB
+    
+* hitting the resulting API url will use boto3 to update dynamodb
+
+* adding:  /pynamodb or /pynamodb/anything will use pynamodb to create records
+
+* hit lambda has specific dynamodb policies associated with it
+
+ 
